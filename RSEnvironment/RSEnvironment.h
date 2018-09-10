@@ -145,6 +145,7 @@ typedef NS_ENUM(NSUInteger, RSEHardwareModel) {
     RSEHardwareModelIPodTouch3G,
     RSEHardwareModelIPodTouch4G,
     RSEHardwareModelIPodTouch5G,
+    RSEHardwareModelIPodTouch6G,
     RSEHardwareModelIPhone3Gs,
     RSEHardwareModelIPhone4,
     RSEHardwareModelIPhone4s,
@@ -153,15 +154,36 @@ typedef NS_ENUM(NSUInteger, RSEHardwareModel) {
     RSEHardwareModelIPhone5s,
     RSEHardwareModelIPhone6,
     RSEHardwareModelIPhone6Plus,
+    RSEHardwareModelIPhone6s,
+    RSEHardwareModelIPhone6sPlus,
+    RSEHardwareModelIPhoneSE,
+    RSEHardwareModelIPhone7,
+    RSEHardwareModelIPhone7Plus,
+    RSEHardwareModelIPhone8,
+    RSEHardwareModelIPhone8Plus,
+    RSEHardwareModelIPhoneX,
     RSEHardwareModelIPad1,
     RSEHardwareModelIPad2,
     RSEHardwareModelIPad3,
     RSEHardwareModelIPad4,
     RSEHardwareModelIPadAir1,
     RSEHardwareModelIPadAir2,
+    RSEHardwareModelIPadPro_129in,
+    RSEHardwareModelIPadPro_97in,
+    RSEHardwareModelIPad5,
+    RSEHardwareModelIPadPro2_129in,
+    RSEHardwareModelIPadPro_105in,
+    RSEHardwareModelIPad6,
     RSEHardwareModelIPadMini1,
     RSEHardwareModelIPadMini2,
     RSEHardwareModelIPadMini3,
+    RSEHardwareModelIPadMini4,
+    RSEHardwareModelAppleTV4,
+    RSEHardwareModelAppleTV4K,
+    RSEHardwareModelAppleWatch1,
+    RSEHardwareModelAppleWatchSeries1,
+    RSEHardwareModelAppleWatchSeries2,
+    RSEHardwareModelAppleWatchSeries3,
     RSEHardwareModelSimulator
 };
 
@@ -174,6 +196,12 @@ typedef NS_ENUM(NSUInteger, RSEHardwareModel) {
 @property (nonatomic, readonly) BOOL isIPad;
 
 @property (nonatomic, readonly) BOOL isIPadMini;
+
+@property (nonatomic, readonly) BOOL isIPadPro;
+
+@property (nonatomic, readonly) BOOL isAppleTV;
+
+@property (nonatomic, readonly) BOOL isAppleWatch;
 
 /// @note Most of the time you should use corresponding compile time macro instead.
 @property (nonatomic, readonly) BOOL isSimulator;

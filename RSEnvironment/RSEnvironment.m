@@ -400,6 +400,9 @@ typedef NS_ENUM(NSUInteger, RSEHardwareFamily) {
     RSEHardwareFamilyIPhone,
     RSEHardwareFamilyIPadStandard,
     RSEHardwareFamilyIPadMini,
+    RSEHardwareFamilyIPadPro,
+    RSEHardwareFamilyAppleWatch,
+    RSEHardwareFamilyAppleTV,
     RSEHardwareFamilySimulator
 };
 
@@ -421,6 +424,9 @@ static NSDictionary *modelsData(){
                   @"iPod5,1": @{hwModel: @(RSEHardwareModelIPodTouch5G),
                                 hwFamily: @(RSEHardwareFamilyIPodTouch),
                                 hwModelName: @"iPod Touch 5G"},
+                  @"iPod7,1": @{hwModel: @(RSEHardwareModelIPodTouch6G),
+                                hwFamily: @(RSEHardwareFamilyIPodTouch),
+                                hwModelName: @"iPod Touch 6G"},
                   // iPhone
                   @"iPhone2,1":@{hwModel: @(RSEHardwareModelIPhone3Gs),
                                  hwFamily: @(RSEHardwareFamilyIPhone),
@@ -461,6 +467,48 @@ static NSDictionary *modelsData(){
                   @"iPhone7,2":@{hwModel: @(RSEHardwareModelIPhone6),
                                  hwFamily: @(RSEHardwareFamilyIPhone),
                                  hwModelName: @"iPhone 6 (Global)"},
+                  @"iPhone8,1":@{hwModel: @(RSEHardwareModelIPhone6s),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 6s (Global)"},
+                  @"iPhone8,2":@{hwModel: @(RSEHardwareModelIPhone6sPlus),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 6s Plus (Global)"},
+                  @"iPhone8,3":@{hwModel: @(RSEHardwareModelIPhoneSE),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone SE (GSM+CDMA)"},
+                  @"iPhone8,4":@{hwModel: @(RSEHardwareModelIPhoneSE),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone SE (Global)"},
+                  @"iPhone9,1":@{hwModel: @(RSEHardwareModelIPhone7),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 7 (Global)"},
+                  @"iPhone9,3":@{hwModel: @(RSEHardwareModelIPhone7),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 7 (GSM)"},
+                  @"iPhone9,2":@{hwModel: @(RSEHardwareModelIPhone7),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 7 Plus (Global)"},
+                  @"iPhone9,4":@{hwModel: @(RSEHardwareModelIPhone7),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 7 Plus (GSM)"},
+                  @"iPhone10,1":@{hwModel: @(RSEHardwareModelIPhone8),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 8 (Global)"},
+                  @"iPhone10,4":@{hwModel: @(RSEHardwareModelIPhone8),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 8 (Global)"},
+                  @"iPhone10,2":@{hwModel: @(RSEHardwareModelIPhone8),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 8 Plus (Global)"},
+                  @"iPhone10,5":@{hwModel: @(RSEHardwareModelIPhone8),
+                                 hwFamily: @(RSEHardwareFamilyIPhone),
+                                 hwModelName: @"iPhone 8 Plus (Global)"},
+                  @"iPhone10,3":@{hwModel: @(RSEHardwareModelIPhoneX),
+                                  hwFamily: @(RSEHardwareFamilyIPhone),
+                                  hwModelName: @"iPhone X (Global)"},
+                  @"iPhone10,6":@{hwModel: @(RSEHardwareModelIPhoneX),
+                                  hwFamily: @(RSEHardwareFamilyIPhone),
+                                  hwModelName: @"iPhone X (Global)"},
                   // iPad
                   @"iPad1,1":@{hwModel: @(RSEHardwareModelIPad1),
                                hwFamily: @(RSEHardwareFamilyIPadStandard),
@@ -509,7 +557,43 @@ static NSDictionary *modelsData(){
                                hwModelName: @"iPad Air 2 (Wi-Fi)"},
                   @"iPad5,4":@{hwModel: @(RSEHardwareModelIPadAir2),
                                hwFamily: @(RSEHardwareFamilyIPadStandard),
-                               hwModelName: @" 	iPad Air 2 (Cellular)"},
+                               hwModelName: @"iPad Air 2 (Cellular)"},
+                  @"iPad6,7":@{hwModel: @(RSEHardwareModelIPadPro_129in),
+                               hwFamily: @(RSEHardwareFamilyIPadStandard),
+                               hwModelName: @"iPad Pro 12.9\" (Wi-Fi)"},
+                  @"iPad6,8":@{hwModel: @(RSEHardwareModelIPadPro_129in),
+                               hwFamily: @(RSEHardwareFamilyIPadPro),
+                               hwModelName: @"iPad Pro 12.9\" (Cellular)"},
+                  @"iPad6,3":@{hwModel: @(RSEHardwareModelIPadPro_97in),
+                               hwFamily: @(RSEHardwareFamilyIPadPro),
+                               hwModelName: @"iPad Pro 9.7\" (Wi-Fi)"},
+                  @"iPad6,4":@{hwModel: @(RSEHardwareModelIPadPro_97in),
+                               hwFamily: @(RSEHardwareFamilyIPadPro),
+                               hwModelName: @"iPad Pro 9.7\" (Cellular)"},
+                  @"iPad6,11":@{hwModel: @(RSEHardwareModelIPad5),
+                               hwFamily: @(RSEHardwareFamilyIPadStandard),
+                               hwModelName: @"iPad 5 (Wi-Fi)"},
+                  @"iPad6,12":@{hwModel: @(RSEHardwareModelIPad5),
+                               hwFamily: @(RSEHardwareFamilyIPadStandard),
+                               hwModelName: @"iPad 5 (Cellular)"},
+                  @"iPad7,1":@{hwModel: @(RSEHardwareModelIPadPro2_129in),
+                               hwFamily: @(RSEHardwareFamilyIPadPro),
+                               hwModelName: @"iPad Pro 2 12.9\" (Wi-Fi)"},
+                  @"iPad7,2":@{hwModel: @(RSEHardwareModelIPadPro2_129in),
+                               hwFamily: @(RSEHardwareFamilyIPadPro),
+                               hwModelName: @"iPad Pro 2 12.9\" (Cellular)"},
+                  @"iPad7,3":@{hwModel: @(RSEHardwareModelIPadPro_105in),
+                               hwFamily: @(RSEHardwareFamilyIPadPro),
+                               hwModelName: @"iPad Pro 10.5\" (Wi-Fi)"},
+                  @"iPad7,4":@{hwModel: @(RSEHardwareModelIPadPro_105in),
+                               hwFamily: @(RSEHardwareFamilyIPadPro),
+                               hwModelName: @"iPad Pro 10.5\" (Cellular)"},
+                  @"iPad7,5":@{hwModel: @(RSEHardwareModelIPad6),
+                                hwFamily: @(RSEHardwareFamilyIPadStandard),
+                                hwModelName: @"iPad 6 (Wi-Fi)"},
+                  @"iPad7,6":@{hwModel: @(RSEHardwareModelIPad6),
+                                hwFamily: @(RSEHardwareFamilyIPadStandard),
+                                hwModelName: @"iPad 6 (Cellular)"},
                   // iPad Mini
                   @"iPad2,5":@{hwModel: @(RSEHardwareModelIPadMini1),
                                hwFamily: @(RSEHardwareFamilyIPadMini),
@@ -535,6 +619,53 @@ static NSDictionary *modelsData(){
                   @"iPad4,8":@{hwModel: @(RSEHardwareModelIPadMini3),
                                hwFamily: @(RSEHardwareFamilyIPadMini),
                                hwModelName: @"iPad Mini 3 (Cellular)"},
+                  @"iPad4,9":@{hwModel: @(RSEHardwareModelIPadMini3),
+                               hwFamily: @(RSEHardwareFamilyIPadMini),
+                               hwModelName: @"iPad Mini 3 (Cellular CN)"},
+                  @"iPad5,1":@{hwModel: @(RSEHardwareModelIPadMini4),
+                               hwFamily: @(RSEHardwareFamilyIPadMini),
+                               hwModelName: @"iPad Mini 4 (Wi-Fi)"},
+                  @"iPad5,2":@{hwModel: @(RSEHardwareModelIPadMini4),
+                               hwFamily: @(RSEHardwareFamilyIPadMini),
+                               hwModelName: @"iPad Mini 4 (Cellular)"},
+                  // AppleTV
+                  @"AppleTV5,3":@{hwModel: @(RSEHardwareModelAppleTV4),
+                               hwFamily: @(RSEHardwareFamilyAppleTV),
+                               hwModelName: @"Apple TV 4"},
+                  @"AppleTV6,2":@{hwModel: @(RSEHardwareModelAppleTV4K),
+                                  hwFamily: @(RSEHardwareFamilyAppleTV),
+                                  hwModelName: @"Apple TV 4K"},
+                  // Apple Watch
+                  @"Watch1,1":@{hwModel: @(RSEHardwareModelAppleWatch1),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch (GPS)"},
+                  @"Watch1,2":@{hwModel: @(RSEHardwareModelAppleWatch1),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch (GPS)"},
+                  @"Watch2,6":@{hwModel: @(RSEHardwareModelAppleWatchSeries1),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 1 38mm (GPS)"},
+                  @"Watch2,7":@{hwModel: @(RSEHardwareModelAppleWatchSeries1),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 1 42mm (GPS)"},
+                  @"Watch2,3":@{hwModel: @(RSEHardwareModelAppleWatchSeries2),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 2 38mm (GPS)"},
+                  @"Watch2,4":@{hwModel: @(RSEHardwareModelAppleWatchSeries2),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 2 42mm (GPS)"},
+                  @"Watch3,1":@{hwModel: @(RSEHardwareModelAppleWatchSeries3),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 3 38mm (GPS+Cellular)"},
+                  @"Watch3,2":@{hwModel: @(RSEHardwareModelAppleWatchSeries3),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 3 42mm (GPS+Cellular)"},
+                  @"Watch3,3":@{hwModel: @(RSEHardwareModelAppleWatchSeries3),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 3 38mm (GPS)"},
+                  @"Watch3,4":@{hwModel: @(RSEHardwareModelAppleWatchSeries3),
+                                hwFamily: @(RSEHardwareFamilyAppleWatch),
+                                hwModelName: @"Apple Watch Series 3 42mm (GPS)"},
 
                   // Simulator
                   @"i386":@{hwModel: @(RSEHardwareModelSimulator),
@@ -570,11 +701,24 @@ static NSDictionary *modelsData(){
 
 -(BOOL)isIPad{
     return RSEHardwareFamilyIPadStandard == self.family ||
-           RSEHardwareFamilyIPadMini == self.family;
+    RSEHardwareFamilyIPadMini == self.family ||
+    RSEHardwareFamilyIPadPro == self.family;
 }
 
 -(BOOL)isIPadMini{
     return RSEHardwareFamilyIPadMini == self.family;
+}
+
+-(BOOL)isIPadPro{
+    return RSEHardwareFamilyIPadPro == self.family;
+}
+
+-(BOOL)isAppleTV{
+    return RSEHardwareFamilyAppleTV == self.family;
+}
+
+-(BOOL)isAppleWatch{
+    return RSEHardwareFamilyAppleWatch == self.family;
 }
 
 -(BOOL)isSimulator{

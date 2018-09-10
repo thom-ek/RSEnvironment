@@ -32,6 +32,9 @@
     // Check if running on iPad Mini
     NSLog(@"Device is iPad Mini: %d", RSEnvironment.hardware.isIPadMini);
     
+    // Check if running on iPad Pro
+    NSLog(@"Device is iPad Pro: %d", RSEnvironment.hardware.isIPadPro);
+    
     // Retina check
     NSLog(@"Retina: %d", RSEnvironment.screen.isRetina);
     
@@ -68,6 +71,10 @@
     
     // Check if device is iPad:
     NSLog(@"Device is iPad: %d",RSEnvironment.hardware.isIPad);
+    // Check if device is Apple TV:
+    NSLog(@"Device is Apple TV: %d",RSEnvironment.hardware.isAppleTV);
+    // Check if device is Apple Watch:
+    NSLog(@"Device is Apple Watch: %d",RSEnvironment.hardware.isAppleWatch);
     
     // Check for specific models:
     NSLog(@"Device is iPad 1: %d", RSEHardwareModelIPad1 == RSEnvironment.hardware.model);
@@ -83,6 +90,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:[[UIViewController alloc] init]];
     [self.window makeKeyAndVisible];
     [self showExample];
     return YES;
