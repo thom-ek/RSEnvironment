@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "RSEnvironment"
-  s.version      = "0.0.3"
+  s.version      = "1.0.0"
   s.summary      = "Most common environment checks in one place: system version, retina support, UI flat mode, device models and so on."
   s.homepage     = "https://github.com/rabovik/RSEnvironment"
   s.license      = 'MIT'
-  s.author       = { "Yan Rabovik" => "yan@rabovik.ru" }
+  s.author       = { "Yan Rabovik" => "yan@rabovik.ru", "Tomasz Muszyński" => "thom@union.waw.pl" }
   s.platform     = :ios
   s.ios.deployment_target = '5.0'
   s.source       = { :git => "https://github.com/rabovik/RSEnvironment.git", :tag => "#{s.version}" }

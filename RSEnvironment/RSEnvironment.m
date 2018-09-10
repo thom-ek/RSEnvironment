@@ -57,7 +57,7 @@ RSEKit *RSEnvironment;
 -(RSESystem *)system{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _system = [RSESystem new];
+        self->_system = [RSESystem new];
     });
     return _system;
 }
@@ -65,7 +65,7 @@ RSEKit *RSEnvironment;
 -(RSEUI *)UI{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _ui = [RSEUI new];
+        self->_ui = [RSEUI new];
     });
     return _ui;
 }
@@ -73,7 +73,7 @@ RSEKit *RSEnvironment;
 -(RSEScreen *)screen{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _screen = [RSEScreen new];
+        self->_screen = [RSEScreen new];
     });
     return _screen;
 }
@@ -81,7 +81,7 @@ RSEKit *RSEnvironment;
 -(RSEApp *)app{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _app = [RSEApp new];
+        self->_app = [RSEApp new];
     });
     return _app;
 }
@@ -89,7 +89,7 @@ RSEKit *RSEnvironment;
 -(RSEHardware *)hardware{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _hardware = [RSEHardware new];
+        self->_hardware = [RSEHardware new];
     });
     return _hardware;
 }
@@ -97,7 +97,7 @@ RSEKit *RSEnvironment;
 -(RSEDeploymentTarget *)deploymentTarget{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _deploymentTarget = [RSEDeploymentTarget new];
+        self->_deploymentTarget = [RSEDeploymentTarget new];
     });
     return _deploymentTarget;
 }
@@ -105,7 +105,7 @@ RSEKit *RSEnvironment;
 -(RSEBaseSDK *)baseSDK{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _baseSDK = [RSEBaseSDK new];
+        self->_baseSDK = [RSEBaseSDK new];
     });
     return _baseSDK;
 }
